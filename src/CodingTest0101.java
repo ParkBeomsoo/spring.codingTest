@@ -16,8 +16,6 @@ public class CodingTest0101 {
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         char c = kb.next().charAt(0);
-        System.out.println("adsf");
         System.out.print(codingTest0101.solution(str, c));
-
     }
 }
