@@ -19,7 +19,6 @@ public class CodingTest0202 {
         int cnt = Integer.parseInt(kb.next());
 
         int[] numArray = new int[cnt];
-        numArray[0] = 0;
         for(int i=0;i<cnt;i++){
             numArray[i]= Integer.parseInt(kb.next());
         }
