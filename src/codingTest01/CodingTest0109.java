@@ -1,3 +1,5 @@
+package codingTest01;
+
 import java.util.Scanner;
 
 public class CodingTest0109 {
