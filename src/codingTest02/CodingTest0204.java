@@ -20,10 +20,10 @@ public class CodingTest0204 {
     }
 
     public static void main(String[] args) {
-        CodingTest0204 codingTest0203 = new CodingTest0204();
+        CodingTest0204 codingTest0204 = new CodingTest0204();
         Scanner kb = new Scanner(System.in);
         int cnt = Integer.parseInt(kb.next());
 
-        System.out.print(codingTest0203.solution(cnt));
+        System.out.print(codingTest0204.solution(cnt));
     }
 }
