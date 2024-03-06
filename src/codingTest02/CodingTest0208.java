@@ -4,34 +4,53 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class CodingTest0208 {
-    public String solution(int[] value){
-        StringBuilder answer = new StringBuilder();
+    public int solution(int[][] value){
+        int answer = 0;
+        int result = 0;
+        int result2 = 0;
 
-        for(int j=0; j<value.length; j++){
-            int check=1;
-            for(int i=0; i<value.length; i++){
-                if(value[j]<value[i]){
-                    check++;
-                }
+        for(int i=0; i < value.length; i++){
+            for (int j=0; j < value.length; j++) {
+                result += value[i][j];
+                result2 += value[j][i];
+          }
+            if(answer<result){
+                answer = result;
             }
-            answer.append(check);
-            if(j<value.length-1){
-                answer.append(" ");
+            if(answer<result2){
+                answer = result2;
             }
+                result=0;
+                result2=0;
         }
 
-        return answer.toString();
+        for(int i=0; i < value.length; i++){
+
+            result += value[i][i];
+            result2 += value[value.length-1-i][i];
+        }
+
+        if(answer<result){
+            answer = result;
+        }
+        if(answer<result2){
+            answer = result2;
+        }
+
+
+        return answer;
     }
 
     public static void main(String[] args) {
         CodingTest0208 codingTest0208 = new CodingTest0208();
         Scanner kb = new Scanner(System.in);
         int cnt = Integer.parseInt(kb.next());
-        int[] value = new int[cnt];
+        int[][] value = new int[cnt][cnt];
         for(int i=0;i<cnt;i++){
-            value[i]= Integer.parseInt(kb.next());
+            for(int j=0;j<cnt;j++){
+                value[i][j]= Integer.parseInt(kb.next());
+            }
         }
-
         System.out.print(codingTest0208.solution(value));
     }
 }
